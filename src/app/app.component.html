@@ -1,0 +1,69 @@
+<div class="header">
+  <dx-button text="Reload data" (click)="reloadData()"></dx-button>
+</div>
+
+<div class="content">
+  <dx-dashboard-control
+    #targetDashboardControl
+    style="display: block;width:100%;height:900px;"
+    endpoint='https://demos.devexpress.com/services/dashboard/api'
+    workingMode="Designer"
+    (onDashboardInitialized)="onDashboardInitialized($event)"
+    (onBeforeRender)="onBeforeRender($event)"
+    (onItemBeginUpdate)="onItemBeginUpdate($event)"
+  >
+  </dx-dashboard-control>
+</div>
+
+
+
+
+<!-- Переключение режимов редактирование/просмотр -->
+<!-- <div class="header">
+  <dx-select-box
+    [width]="200"
+    [dataSource]="dashboards"
+    [(value)]="dashboardId"
+    valueExpr='id'
+    displayExpr='name'>
+  </dx-select-box>
+
+  <dx-button
+    stylingMode="contained"
+    [text]="workingModeText"
+    type="normal"
+    (onClick)="changeWorkingMode()">
+  </dx-button>
+</div>
+
+<div class="content">
+  <dx-dashboard-control
+    endpoint='https://demos.devexpress.com/services/dashboard/api'
+    [(dashboardId)]="dashboardId"
+    [workingMode]='workingMode'
+    (onBeforeRender)='onBeforeRender($event)'>
+  </dx-dashboard-control>
+</div> -->
+
+
+<!-- Popup -->
+<!-- <p>Click one of the buttons below to display a dashboard in the popup window:</p>
+<dx-button
+    text="Show Support Dashboard"
+    (onClick)="showDashboardInPopup(store[0])">
+</dx-button>
+<dx-button
+    text="Show Products Dashboard"
+    (onClick)="showDashboardInPopup(store[1])">
+</dx-button>
+<dx-popup
+    [(visible)]='isPopupVisible'>
+    <div *dxTemplate="let data of 'content'">
+      <dx-dashboard-control
+        style="height: 100%; display: block; width: 100%"
+        endpoint='https://demos.devexpress.com/services/dashboard/api'
+        [dashboardId]='dashboardId'
+        workingMode='Viewer'>
+      </dx-dashboard-control>
+    </div>
+</dx-popup> -->

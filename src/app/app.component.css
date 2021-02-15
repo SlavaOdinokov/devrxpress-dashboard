@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  padding: 10px;
+  border-bottom: 2px solid #a09f9f;
+  background: #3a3a3a;
+}
+.header .dx-widget {
+  margin: 5px;
+}
